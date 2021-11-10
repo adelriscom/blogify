@@ -12,6 +12,7 @@ import { CreatePostComponent } from './create-post/create-post.component';
 // Componentes de Material
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -23,7 +24,7 @@ import {MatInputModule} from '@angular/material/input';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, MatButtonModule, MatInputModule, FormsModule
+    BrowserAnimationsModule, MatButtonModule, MatInputModule, FormsModule, MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import { Post } from '../models/post.model';
+
 
 @Component({
   selector: 'app-create-post',
@@ -9,6 +12,8 @@ export class CreatePostComponent implements OnInit {
 
   content: string = 'Hola Mundo';
   texto: string = '';
+  posts: Post[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +21,11 @@ export class CreatePostComponent implements OnInit {
 
   showText(){
     this.content = this.texto;
+  }
+
+  addPost(form: NgForm){
+    console.log(form.value.title);
+    this.posts.push(form.value);
   }
 
 }
